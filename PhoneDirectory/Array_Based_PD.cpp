@@ -1,7 +1,7 @@
 /** Implementation of the Phone_Directory using an array
 	of entries
 	@author Koffman and Wolfgang
-*/
+	*/
 
 #include "Array_Based_PD.h"
 #include <string>
@@ -115,12 +115,19 @@ void Phone_Directory::save()
 	*/
 string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please complete the remove_entry() method - Ed/Kent
 {
+	///////// Sarah Mickelsen did EX 1.7//////////////////////////
 
-	// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
-	// for (int i = index; i < size - 1; i++)
-		// the_directory[i] = the_directory[i + 1];
+	int index = find(name);
 
-	return "";
+	if (index != -1) {
+		// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
+		delete the_directory[index];
+		for (int i = index; i < size - 1; i++)
+			the_directory[i] = the_directory[i + 1];
+		return name;
+	}
+	else
+		return "";
 }
 
 // Private method implementation
