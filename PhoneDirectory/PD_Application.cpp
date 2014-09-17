@@ -87,7 +87,7 @@ void do_lookup_entry(Phone_Directory& the_directory)
 
 void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please complete the function do_remove_entry - Ed/Kent
 {
-	////// Sarah Mickelsen did EX 1.8 /////////////////////////////////
+	///////// Sarah Mickelsen & Brian Bentley did EX 1.8//////////////////////////
 	string name;
 	cout << "Enter name: ";
 	getline(cin, name);
@@ -95,9 +95,9 @@ void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please com
 	string name_removed = the_directory.remove_entry(name);
 
 	if (name_removed != "")
-		cout << name_removed << " was removed from the directory successfully.";
+		cout << name_removed << " was removed from the directory successfully." << endl;
 	else
-		cout << name << " does not exist in the current directory.";
+		cout << name << " does not exist in the current directory." << endl;
 	
 	
 }
